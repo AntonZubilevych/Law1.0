@@ -1,0 +1,95 @@
+{% extends 'landing.html.twig' %}
+
+
+
+{% block body %}
+    <section id="credo">
+        <div class="container justify-content-center">
+            <div class="row">
+                <div class="col-12">
+                    <div class="photo">
+                        <div class="row">
+                            <div class="col-6">
+                                <h3>
+                                    <span>Успіх</span><br>
+                                    <span class="first_span bg-yellow"> Клієнта -</span><br>
+                                    <span class="second_span ">Мій</span><br>
+                                    <span class="tr_span bg-yellow">Успіх</span>
+                                </h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="blocks">
+        <div class="container">
+
+
+            <div class="row justify-content-end">
+                <h4 id="link_credo" class=" align-middle">
+                    Я можу вам допомогти у вирішенні питань , що стосується :
+                </h4>
+            </div>
+
+            <div id="inner_blocks" class="row justify-content-center ">
+                <div class="col-md-6 col-12 animated hidden" >
+                    <p class="text-block"><i class="fas fa-user-tie"></i>Спадкування</p>
+                </div>
+                <div class="col-md-6 col-12 animated hidden">
+                    <p class="text-block"><i class="fas fa-coins"></i>Пенсії</p>
+                </div>
+                <div class="col-md-6 col-12 animated hidden">
+                    <p class="text-block"><i class="fas fa-percent"></i>Кредитів</p>
+                </div>
+                <div class="col-md-6 col-12 animated hidden">
+                    <p class="text-block"><i class="fas fa-car"></i>ДТП</p>
+                </div>
+                <div  class="col-md-6 col-12 animated hidden">
+                    <p class="text-block"><i class="far fa-bell"></i>Штрафів</p>
+                </div>
+                <div id="bussines" class="col-md-6 col-12 animated hidden">
+                    <p class="text-block"><i class="fas fa-briefcase"></i>Перевірок Бізнесу</p>
+                </div>
+                <div class="col-md-6 col-12 animated hidden">
+                    <p class="text-block"><i class="fas fa-users"></i>Сімейних Спорів</p>
+                </div>
+                <div class="col-md-6 col-12 animated hidden">
+                    <p class="text-block"><i class="far fa-building"></i>Землі</p>
+                </div>
+                <div class="col-md-6 col-12 animated hidden">
+                    <p class="text-block"><i class="fas fa-industry"></i>Створення і Діяльність Юридичних Осіб</p>
+                </div>
+                <div class="col-md-6 col-12 animated hidden">
+                    <p class="text-block"><i class="fas fa-people-carry"></i>Трудових Спорів</p>
+                </div>
+            </div>
+            <div class="row">
+                <a  class="price" href="{{ path('price')  }}">*Ціни на послуги</a>
+            </div>
+        </div>
+    </section>
+    <section id="cv">
+        <div class="container">
+            <div class="row">
+                <h4 id="link_cv" class=" align-middle">Про Мене</h4>
+            </div>
+            <div class="row">
+                <div class="col-md-2 "><h6><i class="far fa-address-book animated hidden"></i></h6></div>
+                <div class="col-md-10">
+                    <p class="cv-text">
+                        Я займаюся юридичною практикою <span class="hidden animated">11 років</span>.
+                        5 років працювала в органах прокуратури.
+                        Є <span class="hidden animated">практикуючим</span>  адвокатом <span class="hidden animated"> 4 роки.</span>
+                        Постійно працюю над підвищенням своєї <span class="hidden animated"> кваліфікації </span>, беру участь у семінарах, тренінгах, форумах.
+                        Закінчила Національний юридичний університет імені <span class="hidden animated">Ярослава Мудрого </span>у м. Харкові, де отримала дипломи бакалавра та магістра з <span class="hidden animated">відзнакою.</span>
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+{% endblock %}

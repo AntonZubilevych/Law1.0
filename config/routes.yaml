@@ -1,0 +1,35 @@
+index:
+    path: /
+    controller: App\Controller\SiteController::index
+add:
+    path: admin/add
+    controller: App\Controller\Admin\PostController::add
+post:
+    path: admin/post/{id}
+    controller: App\Controller\Admin\PostController::edit
+posts:
+    path: admin/posts
+    controller: App\Controller\Admin\PostController::getPost
+delete:
+    path: /admin/delete{id}
+    controller: App\Controller\Admin\PostController::delete
+status:
+    path: /admin/status/{id}/{status}
+    controller: App\Controller\Admin\PostController::changeStatus
+public:
+    path: /public/{offset}
+    controller: App\Controller\PostController::index
+price:
+    path: /price
+    controller: App\Controller\PostController::price
+page:
+    path: /page/{url}
+    controller: App\Controller\PostController::page
+app_login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+#app_register:
+#    path: /register
+#    controller: App\Controller\RegistrationController::register
+logout:
+    path: /logout

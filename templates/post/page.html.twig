@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello PostController!{% endblock %}
+
+{% block body %}
+    <div class="blog-header">
+        <div class="container">
+            <div class="row">
+                <h1 class="blog-title bg-yellow">Публікація # {{ post.id }}</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-sm-8 blog-main">
+
+                <div class="blog-post">
+                    <h2 class="blog-post-title">{{ post.title }}</h2>
+                    <p class="blog-post-meta"> {{ post.crated_at|date("d.m  , Y", "Europe/Helsinki") }} by <a href="#">Адвокат Панчелюга</a></p>
+                    <p>{{ post.text|nl2br }}</p>
+                </div><!-- /.blog-post -->
+
+
+
+            </div><!-- /.blog-main -->
+
+            <div class="col-md-3 offset-md-1 blog-sidebar">
+                <div class="sidebar-module sidebar-module-inset">
+                    <h4>About</h4>
+                    <p>{{ post.about }}</p>
+                </div>
+                <div class="sidebar-module">
+                    <h4>Archives</h4>
+                    {% for archive in archives %}
+                    <ol class="list-unstyled text-center">
+                        <li><a href="{{ path('page', {'url': archive.url}) }}">Article #{{ archive.id }}</a></li>
+                    </ol>
+                    {% endfor %}
+                </div>
+            </div><!-- /.blog-sidebar -->
+
+        </div><!-- /.row -->
+
+    </div>
+{% endblock %}

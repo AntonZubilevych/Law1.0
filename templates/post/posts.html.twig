@@ -1,0 +1,47 @@
+
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello !{% endblock %}
+
+{% block body %}
+<div class="container justify-content-center">
+
+
+
+    <div class="row  ">
+        <div class="col-12 " >
+            <h1 class="bg-yellow">Мої Публікації </h1>
+        </div>
+
+        <div class="col-12 " >
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="{{ path('add') }}">Add Articles</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Articles</li>
+                </ol>
+            </nav>
+        </div>
+
+        {% for post in posts  %}
+                    <div class="col-md-4 col-12 " >
+                        <div class="card">
+                            <h5 class="card-header"><small>{{ post.cratedAt|date("m/d/Y", "Europe/Helsinki") }} </small></h5>
+                            <div class="card-body">
+                                <h5 class="card-title">{{post.title}}</h5>
+                            {% if(post.status == 0) %}
+                                <a class="btn btn-primary" href="{{ path('status', {'id': post.id,'status':1}) }}">Опублікувати</a>
+                            {% elseif(post.status == 1) %}
+                                <a class="btn btn-primary" href="{{ path('status', {'id': post.id,'status':0}) }}">Заморизити</a>
+                            {% endif %}
+                                <a class="btn btn-warning" href="{{ path('post', {'id': post.id}) }}">Рeдагувати</a>
+                                <a class="btn btn-danger" href="{{ path('delete', {'id': post.id}) }}">Видалити</a>
+                            </div>
+                        </div>
+                    </div>
+
+            </a>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
