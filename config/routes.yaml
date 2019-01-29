@@ -30,6 +30,6 @@ app_login:
     controller: App\Controller\SecurityController::login
 #app_register:
 #    path: /register
-#    controller: App\Controller\RegistrationController::register
+#   controller: App\Controller\RegistrationController::register
 logout:
     path: /logout
