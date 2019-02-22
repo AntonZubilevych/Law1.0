@@ -2,6 +2,7 @@
 
 namespace App\Controller\Admin;
 
+use App\DTO\PostDto;
 use App\Entity\Post;
 use App\Form\PostType;
 use App\Repository\PostRepository;
@@ -27,14 +28,13 @@ class PostController extends AbstractController
     }
 
 
-    public function add(Request $request,PostFactory $factory ):Response
+    public function add(Request $request,PostFactory $factory):Response
     {
-        $post = new Post();
-        $form = $this->createForm(PostType::class, $post);
+        $form = $this->createForm(PostType::class);
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
-            $post = $factory->create($post);
+            $post = $factory->create($form->getData());
             $this->entityManager->persist($post);
             $this->entityManager->flush();
 

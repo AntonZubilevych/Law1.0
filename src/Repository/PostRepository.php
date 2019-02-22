@@ -20,7 +20,7 @@ class PostRepository extends ServiceEntityRepository
     }
 
       /**
-      * @return Post[] Returns an array of Post objects
+      * @return Post[] Returns an array of PostDto objects
       */
 
     public function findByExampleField($value)

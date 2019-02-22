@@ -9,6 +9,7 @@
 namespace App\Services\PostService;
 
 
+use App\DTO\PostDto;
 use App\Entity\Post;
 use App\Services\Converter;
 
@@ -21,8 +22,12 @@ class PostFactory
         $this->convector = $convector;
     }
 
-    public function create(Post $post):Post
+    public function create(PostDto $dto):Post
     {
+        $post =  new Post();
+        $post->setTitle($dto->getTitle());
+        $post->setAbout($dto->getAbout());
+        $post->setText($dto->getText());
         $post->setCratedAt(new \DateTime());
         $post->setStatus(0);
         $post->setUrl($this->convector->createUri($post->getTitle()));

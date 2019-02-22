@@ -33,3 +33,6 @@ app_login:
 #   controller: App\Controller\RegistrationController::register
 logout:
     path: /logout
+settings:
+    path: admin/settings
+    controller: App\Controller\Admin\SettingsController::index

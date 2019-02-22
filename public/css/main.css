@@ -1,39 +1,54 @@
-body,h1,h2,h3,h3,h4,h5,h6,a,p,span
-{
+body, h1, h2, h3, h3, h4, h5, h6, a, p, span {
     font-family: 'Oswald', sans-serif;
 }
-i{
+
+i {
     margin: 5px;
 }
-span.element{
+
+span.element {
     line-height: 1.5;
     padding: 5px 5px 0 5px;
 }
-.navbar-toggler{
-    border: 3px solid rgba(244, 232, 66,0.7);
 
+.bg-white-noise {
+    background-image: url("../img/img-noise.png");
 }
 
-.bg-dark-grey
-{
-    background-color: #cfd1d3;
+.bg-pink {
+    background-color: #e00660;
+    color: #ffffff;
 }
-.tel{
-    color:#9FA09B;
-    padding:7.5px;
+
+.white-text{
+    color: #ffffff;
 }
-#sidebar{
-    background-color: firebrick;
+
+button {
+    color: #ffffff;
 }
-h1{
+
+button:hover {
+    color: #e00660;
+}
+
+.tel {
+    color: #ffffff;
+    padding: 8px;
+}
+
+.tel:hover {
+    color: #e00660;
+}
+
+h1 {
     font-size: 45px;
     margin-top: 150px;
     margin-bottom: 150px;
     text-align: center;
-    background-color: rgba(194, 232, 225 , 0.15);
-
 }
-.typed-cursor{
+
+.typed-cursor {
     height: 20px;
 }
 
@@ -45,13 +60,13 @@ h1{
     z-index: 12000; /* Stay on top */
     top: 0; /* Stay at the top */
     left: 0;
-    background-color: #111; /* Black*/
+    background-image: url("../img/img-noise.png"); /* Black*/
     overflow-x: hidden; /* Disable horizontal scroll */
     padding-top: 60px; /* Place content 60px from the top */
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
-.opacity{
+.opacity {
     opacity: 0.5;
 }
 
@@ -60,14 +75,14 @@ h1{
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: #ffffff;
     display: block;
     transition: 0.3s;
 }
 
 /* When you mouse over the navigation links, change their color */
 .sidenav a:hover {
-    color: #f1f1f1;
+    background-color: #e00660;
 }
 
 /* Position and style the close button (top right corner) */
@@ -88,81 +103,64 @@ h1{
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
 
-.circle p{
-    font-size:19px;
+.circle p {
+    font-size: 19px;
     -webkit-transform: rotate(-45deg);
-    background-color: rgba(1,1,1,0.3);
+    transform: rotate(-45deg);
+    background-color: rgba(1, 1, 1, 0.3);
+}
 
-}
-#first{
-
-}
-#second{
-    z-index: 2;
-}
-#third{
-    z-index: 3;
-}
-.text-block{
+.text-block {
     text-align: center;
-    padding: 7.5px;
+    padding: 0.5rem;
     margin: 10px 0;
     border: 1px solid gainsboro;
 }
-#credo{
-    margin: 80px 0;
-    background-color: #E0E0E0;
+
+#credo {
+    margin: 50px 0;
+    background-image: url("../img/img-noise.png");
 }
-.hidden{
-    visibility: hidden;
-}
-.show{
-    visibility: initial;
-}
-h4{
-    background-color: rgba(244, 232, 66,0.7);
-    padding: 10px;
-}
-h3{
+
+.credo-text {
     text-align: center;
     font-size: 5vw;
-    padding: 50px 0;
-
-    margin-bottom: 0;
-}
-.bg-yellow{
-    background-color: rgba(244, 232, 66,0.7);
-}
-.yellow-border{
-    background-color: rgba(244, 232, 66,0.7)!important;
+    color: #e00660;
 }
 
-
-.first_span{
-
-
+.hidden {
+    visibility: hidden;
 }
+
+.show {
+    visibility: initial;
+}
+
+h4 {
+    background-color: #e00660;
+    padding: 10px;
+    color: #ffffff;
+}
+
 p i {
     padding: 0 5px;
     font-size: 18px;
 }
-.photo{
-    background-image: url("../images/face.jpg"); /* The image used */
-    background-color: #cccccc; /* Used if the image is unavailable */
-    height: 100%; /* You must set a specified height */
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover;
-}
-.text-block:hover{
-    background-color: rgba(244, 232, 66,0.7);
+
+.text-block:hover {
+    background-image: url("../img/img-noise.png");
     font-size: 20px;
+    color: #ffffff;
 }
 
 
 /* responsive circle */
 
-.circle ul, li { list-style: none; margin: 0; padding: 0; }
+.circle ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
 .circle ul {
     display: -webkit-flex;
@@ -183,19 +181,22 @@ p i {
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover;
-    background-image: url("../images/cirle.jpg"); /* The image used */
+    background-image: url("../img/cirle.jpg"); /* The image used */
 }
-i.fa-address-book{
+
+i.fa-address-book {
     font-size: 8vw;
 }
 
-i.fa-address-book:hover{
+i.fa-address-book:hover {
+    background-color: rgba(244, 232, 66, 0.7);
+}
 
-    background-color: rgba(244, 232, 66,0.7);
-}
-a.price{
+a.price {
     margin: 25px 0;
+    color: #000000;
 }
+
 .circle ul li img {
     position: absolute;
     width: 100%;
@@ -209,70 +210,122 @@ a.price{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     color: #000;
     margin: 0;
     padding: 10px;
     font-size: 2vw;
-
-
+    text-align: right;
 }
 
-.sidenav a:hover{
-    background-color: rgba(244, 232, 66,0.7);
-}
-
-#cv{
+#cv {
     margin: 50px 0 0 0;
-    background-color: #E0E0E0;
+    /*background-color: #E0E0E0;*/
     padding: 40px 0;
 }
-.cv-text{
+
+.cv-text {
     font-size: 22px;
-    line-height: 2.5;
+    line-height: 1.8;
 }
-p.cv-text span.hidden{
+
+p.cv-text span.hidden {
     padding: 5px;
 }
 
-#table h1{
+#table h1 {
     margin: 75px 0 25px 0;
 }
 
-footer{
-    background-color: #adadad;
+footer {
+    background-image: url("../img/img-noise.png");
 }
-.pos-f-t{
+
+.pos-f-t {
     position: fixed;
     width: 100%;
     z-index: 1000;
 }
 
+a.contacts{
+    color: #ffffff;
+}
+
+a.contacts:hover{
+    color: #ff0082;
+}
+
 @media screen and (max-height: 450px) {
-    .sidenav {padding-top: 15px;}
-    .sidenav a {font-size: 18px;}
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav a {
+        font-size: 18px;
+    }
 }
 
 @media only screen and (max-width: 450px) {
-    h1{
+    h1 {
         margin-bottom: 50px;
     }
-    i.fa-address-book{
+
+    h3 {
+        font-size: 8vw;
+    }
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 576px) {
+    .circle ul li h3 {
+        font-size: 6vw;
+    }
+
+    .bg-photo {
+        background-image: url("../img/face.png"); /* The image used */
+        background-position: center; /* Center the image */
+        background-repeat: no-repeat; /* Do not repeat the image */
+        background-size: contain;
+    }
+
+    #credo {
+        background: transparent;
+    }
+
+    .foto-ava {
         display: none;
     }
-    h3{font-size: 8vw;}
-    .circle ul li h3 { font-size: 4vw;}
 
+    .credo-text {
+        text-align: center;
+        font-size: 10vw;
+        color: #e00660;
+        padding-left: 1rem;
+    }
+
+    .credo-height {
+        height: 550px;
+    }
 }
-#post_text{
-    height: 700px;
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .circle ul li h3 {
+        font-size: 4vw;
+    }
 }
-.jumbotron{
-    padding-top:150px;
-    overflow: hidden;
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .circle ul li h3 {
+        font-size: 2.5vw;
+    }
 }
-.post_card{
-    border: 1px solid rgba(244, 232, 66,0.7);
-    padding: 7.5px;
-    margin: 15px 0;
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .circle ul li h3 {
+        font-size: 2rem;
+    }
 }
+

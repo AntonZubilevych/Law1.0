@@ -1,11 +1,12 @@
 <div class="pos-f-t">
-    <nav class="navbar  bg-dark-grey">
-        <button class="navbar-toggler text-white" onclick="openNav()" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar  bg-white-noise">
+        <button class="navbar-toggler" onclick="openNav()" type="button" data-toggle="collapse"
+                data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                aria-expanded="false" aria-label="Toggle navigation">
             <i class="fa fa-bars"></i>Menu
         </button>
-
         <span>
-                   <a class="bg-light tel yellow-border" href="tel:+380978892012"><i class="fas fa-phone-volume animated"></i> 380978892012</a>
+                   <a class="tel" href="tel:+380971336851"><i class="fas fa-phone-volume animated"></i>380971336851</a>
                </span>
     </nav>
 </div>
@@ -19,6 +20,7 @@
     <a href={{ path('index') }}#link_contact onclick="closeNav()">Контакти</a>
     {% if(is_granted('ROLE_USER')) %}
     <a href="{{ path('posts') }}" onclick="closeNav()">Адміністатор</a>
+        <a href="{{ path('settings') }}" onclick="closeNav()">Адміністатор</a>
         <a href="{{ path('logout') }}" onclick="closeNav()">Вийти</a>
     {% endif %}
 </div>
