@@ -20,7 +20,7 @@
     <a href={{ path('index') }}#link-contact onclick="closeNav()">Контакти</a>
     {% if(is_granted('ROLE_USER')) %}
     <a href="{{ path('posts') }}" onclick="closeNav()">Адміністатор</a>
-        <a href="{{ path('settings') }}" onclick="closeNav()">Адміністатор</a>
+        <a href="{{ path('settings') }}" onclick="closeNav()">Налаштування</a>
         <a href="{{ path('logout') }}" onclick="closeNav()">Вийти</a>
     {% endif %}
 </div>
