@@ -2,18 +2,14 @@
 
 namespace App\Controller\Admin;
 
-use App\DTO\PostDto;
-use App\Entity\Post;
+
 use App\Form\PostType;
 use App\Repository\PostRepository;
-use App\Services\Converter;
 use App\Services\PostService\PostFactory;
-use Doctrine\ORM\EntityManager;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\HttpFoundation\{Request,Response};
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Symfony\Component\Routing\Annotation\Route;
+
 
 class PostController extends AbstractController
 {

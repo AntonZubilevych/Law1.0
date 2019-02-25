@@ -32,11 +32,11 @@
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="{{ path('index') }}"  {% if main is defined and main is not empty %}class="bg-yellow" {% endif %} onclick="closeNav()" >Головна</a>
-        <a href="{{ path('index') }}#link_credo" onclick="closeNav()" >Послуги</a>
-        <a href="{{ path('index') }}#link_cv"  onclick="closeNav()">Про Адвоката</a>
+        <a href="{{ path('index') }}#inner_blocks" onclick="closeNav()" >Послуги</a>
+        <a href="{{ path('index') }}#cv"  onclick="closeNav()">Про Адвоката</a>
         <a href="{{ path('price')  }}" onclick="closeNav()" {% if price is defined and price is not empty %}class="bg-yellow" {% endif %}>Вартість Послуг</a>
         <a href="{{ path('public' , {'offset': 6})  }}" {% if posts is defined and posts is not empty %}class="bg-yellow" {% endif %} onclick="closeNav()">Блог</a>
-        <a href={{ path('index') }}#link_contact onclick="closeNav()">Контакти</a>
+        <a href={{ path('index') }}#link-contact onclick="closeNav()">Контакти</a>
         {% if(is_granted('ROLE_USER')) %}
             <a href="{{ path('posts') }}" onclick="closeNav()">Адміністатор</a>
             <a href="{{ path('logout') }}" onclick="closeNav()">Вийти</a>
