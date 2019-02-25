@@ -3,6 +3,7 @@
 namespace App\Controller\Admin;
 
 
+use App\Entity\Post;
 use App\Form\PostType;
 use App\Repository\PostRepository;
 use App\Services\PostService\PostFactory;
