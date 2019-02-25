@@ -26,7 +26,7 @@ class PostType extends AbstractType
     public function configureOptions(OptionsResolver $resolver)
     {
         $resolver->setDefaults([
-            'data_class' => PostDto::class,
+            'data_class' => Post::class,
         ]);
     }
 }

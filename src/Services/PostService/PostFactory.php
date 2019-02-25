@@ -22,7 +22,7 @@ class PostFactory
         $this->convector = $convector;
     }
 
-    public function create(PostDto $dto):Post
+    public function create(Post $dto):Post
     {
         $post =  new Post();
         $post->setTitle($dto->getTitle());
