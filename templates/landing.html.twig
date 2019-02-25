@@ -23,6 +23,41 @@
             <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
             <!-- End GOOGLE FONT -->
             <!-- BEGIN PLUGINS STYLES -->
+            <!-- Global site tag (gtag.js) - Google Ads: 880226061 -->
+            <script async src="https://www.googletagmanager.com/gtag/js?id=AW-880226061"></script>
+            <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+
+                gtag('config', 'AW-880226061');
+            </script>
+            <!-- Event snippet for Ring conversion page
+            In your html page, add the snippet and call gtag_report_conversion when someone clicks on the chosen link or button. -->
+            <script>
+                function gtag_report_conversion(url) {
+                    var callback = function () {
+                        if (typeof(url) != 'undefined') {
+                            window.location = url;
+                        }
+                    };
+                    gtag('event', 'conversion', {
+                        'send_to': 'AW-880226061/44OjCOz57JUBEI3e3KMD',
+                        'event_callback': callback
+                    });
+                    return false;
+                }
+            </script>
+            <script>
+                (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                ga('create', 'UA-66366020-1', 'auto');
+                ga('send', 'pageview');
+
+            </script>
         </head>
         <!-- End GOOGLE FONT -->
         <!-- BEGIN PLUGINS STYLES -->
