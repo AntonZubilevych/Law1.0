@@ -6,6 +6,7 @@ use App\DTO\PostDto;
 use App\Entity\Post;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\SubmitButton;
 use Symfony\Component\OptionsResolver\OptionsResolver;
@@ -17,7 +18,7 @@ class PostType extends AbstractType
         $builder
             ->add('about')
             ->add('title')
-            ->add('text')
+            ->add('text',TextareaType::class )
             ->add('save', SubmitType::class, ['label' => 'Create Post'])
         ;
     }

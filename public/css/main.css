@@ -236,7 +236,9 @@ p.cv-text span.hidden {
 #table h1 {
     margin: 75px 0 25px 0;
 }
-
+#post_text{
+    height:700px;
+}
 footer {
     background-image: url("../img/img-noise.png");
 }
