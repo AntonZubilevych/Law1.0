@@ -5,6 +5,7 @@ namespace App\Form;
 use App\DTO\PostDto;
 use App\Entity\Post;
 use Symfony\Component\Form\AbstractType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -18,7 +19,7 @@ class PostType extends AbstractType
         $builder
             ->add('about')
             ->add('title')
-            ->add('text',TextareaType::class )
+            ->add('text', HiddenType::class )
             ->add('save', SubmitType::class, ['label' => 'Create Post'])
         ;
     }

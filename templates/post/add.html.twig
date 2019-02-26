@@ -9,10 +9,15 @@
         <h1 class="bg-yellow">Додати Пост</h1>
 
     <div class="col-12 col-md-10 offset-md-1">
+
     {{ form_start(form) }}
-    {{ form_widget(form) }}
+        {{ form_row(form.title) }}
+        {{ form_row(form.about) }}
+        {{ form_row(form.text) }}
+        <div id="editor"></div>
+        {{ form_end(form) }}
     </div>
     </div>
 </div>
-    {{ form_end(form) }}
+
 {% endblock %}
