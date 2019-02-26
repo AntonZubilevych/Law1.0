@@ -72,23 +72,29 @@ function animateWords(){
 function animateCircle() {
     var circle = document.getElementsByClassName('circle')[0];
 
+    if( circle !== undefined){
+        circle.classList.add('show');
+        circle.classList.add('zoomInRight');
+        circle.addEventListener('mouseout' , function () {
+            circle.classList.remove('zoomInRight');
+            circle.classList.toggle('wobble');
 
-    circle.classList.add('show');
-    circle.classList.add('zoomInRight');
-    circle.addEventListener('mouseout' , function () {
-        circle.classList.remove('zoomInRight');
-        circle.classList.toggle('wobble');
+        })
+    }
 
-    })
 }
 
 function typping() {
+
+    var elem = document.querySelector('.element');
     var options = {
         strings: ["","Чесність","Довіра","Доступність","Ваш Адвокат <br> Катерина Панчелюга"],
         typeSpeed: 30
     };
+    if( elem !== undefined){
+        var typed = new Typed(".element", options);
+    }
 
-    var typed = new Typed(".element", options);
 }
 
 function animatedTel() {

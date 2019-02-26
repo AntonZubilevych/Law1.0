@@ -7,11 +7,17 @@
 <div class="container justify-content-center">
     <div class="row">
         <h1 class="bg-yellow">Редакція</h1>
+        {
+        <div class="col-12 col-md-10 offset-md-1">
 
-    <div class="col-12 col-md-10 offset-md-1">
-    {{ form_start(form) }}
-    {{ form_widget(form) }}
-    </div>
+            {{ form_start(form) }}
+            {{ form_row(form.title) }}
+            {{ form_row(form.about) }}
+            {{ form_row(form.text) }}
+
+            <div id="editor"> {{  form.text.vars.value|raw }}</div>
+            {{ form_end(form) }}
+        </div>
     </div>
 </div>
     {{ form_end(form) }}
