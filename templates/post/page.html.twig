@@ -20,7 +20,7 @@
                 <div class="blog-post">
                     <h2 class="blog-post-title">{{ post.title }}</h2>
                     <p class="blog-post-meta"> {{ post.crated_at|date("d.m  , Y", "Europe/Helsinki") }} by <a href="#">Адвокат Панчелюга</a></p>
-                    <div class="ql-editor">{{ post.text|raw }}</div>gi
+                    <div class="ql-editor">{{ post.text|raw|nl2br }}</div>
                 </div><!-- /.blog-post -->
 
 
