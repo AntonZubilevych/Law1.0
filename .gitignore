@@ -1,4 +1,4 @@
-t/.idea/
+/.idea/
 /vendor/
 save.nano
 ###> symfony/framework-bundle ###
