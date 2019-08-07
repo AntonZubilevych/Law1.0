@@ -7,7 +7,7 @@ i {
 }
 
 span.element {
-    line-height: 1.5;
+    /*line-height: 1.5;*/
     padding: 5px 5px 0 5px;
 }
 
@@ -20,7 +20,7 @@ span.element {
     color: #ffffff;
 }
 
-.white-text{
+.white-text {
     color: #ffffff;
 }
 
@@ -42,9 +42,9 @@ button:hover {
 }
 
 h1 {
-    font-size: 45px;
-    margin-top: 150px;
-    margin-bottom: 150px;
+    font-size: 3rem;
+    margin-top: 5vw;
+    margin-bottom: 5vw;
     text-align: center;
 }
 
@@ -103,13 +103,6 @@ h1 {
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
 
 
-.circle p {
-    font-size: 19px;
-    -webkit-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    background-color: rgba(1, 1, 1, 0.3);
-}
-
 .text-block {
     text-align: center;
     padding: 0.5rem;
@@ -153,37 +146,6 @@ p i {
     color: #ffffff;
 }
 
-
-/* responsive circle */
-
-.circle ul, li {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.circle ul {
-    display: -webkit-flex;
-    display: flex;
-    text-align: center;
-    justify-content: space-between;
-    margin-bottom: 30px;
-}
-
-.circle ul li {
-    width: 100%;
-    text-align: center;
-    position: relative;
-    padding-bottom: 100%;
-    border-radius: 50%;
-    overflow: hidden;
-    background-color: #ff0082;
-    background-position: center; /* Center the image */
-    background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover;
-    background-image: url("../img/cirle.jpg"); /* The image used */
-}
-
 i.fa-address-book {
     font-size: 8vw;
 }
@@ -197,35 +159,10 @@ a.price {
     color: #000000;
 }
 
-.circle ul li img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-}
-
-.circle ul li h3 {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #000;
-    margin: 0;
-    padding: 10px;
-    font-size: 2vw;
-    text-align: right;
-}
-
 #cv {
     margin: 50px 0 0 0;
     /*background-color: #E0E0E0;*/
     padding: 40px 0;
-}
-
-#editor{
-    height: 800px;
 }
 
 .cv-text {
@@ -240,9 +177,7 @@ p.cv-text span.hidden {
 #table h1 {
     margin: 75px 0 25px 0;
 }
-#post_text{
-    height:700px;
-}
+
 footer {
     background-image: url("../img/img-noise.png");
 }
@@ -253,13 +188,29 @@ footer {
     z-index: 1000;
 }
 
-a.contacts{
+a.contacts {
     color: #ffffff;
 }
 
-a.contacts:hover{
+a.contacts:hover {
     color: #ff0082;
 }
+
+.iframe-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.iframe-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 
 @media screen and (max-height: 450px) {
     .sidenav {
@@ -272,9 +223,6 @@ a.contacts:hover{
 }
 
 @media only screen and (max-width: 450px) {
-    h1 {
-        margin-bottom: 50px;
-    }
 
     h3 {
         font-size: 8vw;
@@ -283,15 +231,17 @@ a.contacts:hover{
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 576px) {
-    .circle ul li h3 {
-        font-size: 6vw;
-    }
-
     .bg-photo {
-        background-image: url("../img/face.png"); /* The image used */
+        background-image: url("../img/face.webp"); /* The image used */
         background-position: center; /* Center the image */
         background-repeat: no-repeat; /* Do not repeat the image */
         background-size: contain;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-top: 20vw;
+        margin-bottom: 20vw;
     }
 
     #credo {
@@ -313,25 +263,3 @@ a.contacts:hover{
         height: 550px;
     }
 }
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-    .circle ul li h3 {
-        font-size: 4vw;
-    }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-    .circle ul li h3 {
-        font-size: 2.5vw;
-    }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-    .circle ul li h3 {
-        font-size: 2rem;
-    }
-}
-
