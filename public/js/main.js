@@ -1,27 +1,27 @@
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
-   // document.getElementById("main").style.marginLeft = "250px";
+    // document.getElementById("main").style.marginLeft = "250px";
     document.body.style.backgroundColor = "rgba(0,0,0,0.15)";
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
 function closeNav() {
     document.getElementById("mySidenav").style.width = "0";
-   // document.getElementById("main").style.marginLeft = "0";
+    // document.getElementById("main").style.marginLeft = "0";
     document.body.style.backgroundColor = "white";
 }
 
-function animatedBlock(){
+function animatedBlock() {
 
 
-        var blocks = document.getElementById('inner_blocks').children;
-        for (var i = 0; i < blocks.length; i++) {
-            setTimeout(function (y) {
-                blocks[y].classList.add('show');
-                blocks[y].classList.add('zoomIn');
-            }, i * 500, i);
-        }
+    var blocks = document.getElementById('inner_blocks').children;
+    for (var i = 0; i < blocks.length; i++) {
+        setTimeout(function (y) {
+            blocks[y].classList.add('show');
+            blocks[y].classList.add('zoomIn');
+        }, i * 500, i);
+    }
 }
 
 function bindAnimation() {
@@ -29,7 +29,7 @@ function bindAnimation() {
         var scrolled = window.pageYOffset || document.documentElement.scrollTop;
         var width  = document.getElementById('credo').offsetTop;
         var widthToCv =  document.querySelector('#bussines').offsetTop;
-        var navbar = document.getElementsByClassName('pos-f-t')[0];
+        var navbar = document.getElementsByClassName('navbar')[0];
         if(scrolled>width){
             animatedBlock();
         }
@@ -69,42 +69,35 @@ function animateWords(){
 
 
 
-function animateCircle() {
-    var circle = document.getElementsByClassName('circle')[0];
-
-    if( circle !== undefined){
-        circle.classList.add('show');
-        circle.classList.add('zoomInRight');
-        circle.addEventListener('mouseout' , function () {
-            circle.classList.remove('zoomInRight');
-            circle.classList.toggle('wobble');
-
-        })
-    }
-
-}
+// function animateCircle() {
+//     var circle = document.getElementsByClassName('circle')[0];
+//
+//
+//     circle.classList.add('show');
+//     circle.classList.add('zoomInRight');
+//     circle.addEventListener('mouseout' , function () {
+//         circle.classList.remove('zoomInRight');
+//         circle.classList.toggle('wobble');
+//
+//     })
+// }
 
 function typping() {
-
-    var elem = document.querySelector('.element');
     var options = {
-        strings: ["","Чесність","Довіра","Доступність","Ваш Адвокат <br> Катерина Панчелюга"],
+        strings: ["","ЧЕСНІСТЬ","ДОВІРА","ДОСТУПНІСТЬ","Ваш АДВОКАТ <br> Катерина Панчелюга"],
         typeSpeed: 30
     };
-    if( elem !== undefined){
-        var typed = new Typed(".element", options);
-    }
 
+    var typed = new Typed(".element", options);
 }
 
 function animatedTel() {
-        var tel = document.getElementsByClassName('fa-phone-volume')[0];
-        tel.classList.toggle('tada');
-        tel.style.fontSize = '36 px';
+    var tel = document.getElementsByClassName('fa-phone-volume')[0];
+    tel.classList.toggle('tada');
+    tel.style.fontSize = '36 px';
 }
 
 typping();
-setTimeout(animateCircle,5500);
+// setTimeout(animateCircle,5500);
 bindAnimation();
 setInterval(animatedTel,1000);
-
